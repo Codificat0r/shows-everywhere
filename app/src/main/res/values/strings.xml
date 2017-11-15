@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">Showseverywhere</string>
-    <string name="txv_login_title">Shows Everywhere - Login</string>
-    <string name="txv_login_usuario">Usuario o e-mail</string>
-    <string name="txv_login_password">Contraseña</string>
-    <string name="chbx_login_remember_user">Recordar usuario</string>
-    <string name="txv_login_register"><u>Deseo registrame</u></string>
-    <string name="txv_login_forget_password"><u>He olvidado mi contraseña</u></string>
-    <string name="btn_login_access">Acceder</string>
-    <string name="btn_login_google">Google</string>
-    <string name="btn_login_facebook">Entrar con facebook</string>
+    <string name="txv_titulo">Shows Everywhere - Login</string>
+    <string name="txv_usuario">Usuario o e-mail</string>
+    <string name="txv_contrasena">Contraseña</string>
+    <string name="chbx_recordar_usuario">Recordar usuario</string>
+    <string name="txv_registrar"><u>Deseo registrame</u></string>
+    <string name="txv_olvido_contrasena"><u>He olvidado mi contraseña</u></string>
+    <string name="btn_acceder">Acceder</string>
+    <string name="btn_google">Google</string>
+    <string name="btn_facebook">Entrar con facebook</string>
 </resources>

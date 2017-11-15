@@ -4,106 +4,106 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.showseverywhere.LoginActivity"
+    tools:context="com.example.showseverywhere.ui.login.LoginActivity"
     android:background="@color/colorPrimary">
 
     <TextView
-        android:id="@+id/txvLoginTitle"
+        android:id="@+id/txvTitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
-        android:text="@string/txv_login_title"
+        android:text="@string/txv_titulo"
         android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txvLoginUsuario"
+        android:id="@+id/txvUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/txv_login_usuario"
+        android:text="@string/txv_usuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
-        app:layout_constraintStart_toStartOf="@+id/txvLoginTitle"
-        app:layout_constraintTop_toBottomOf="@+id/txvLoginTitle" />
+        app:layout_constraintStart_toStartOf="@+id/txvTitulo"
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
 
     <EditText
-        android:id="@+id/edtLoginUsuario"
+        android:id="@+id/edtUsuario"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toStartOf="@+id/txvLoginUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/txvLoginUsuario"
+        app:layout_constraintStart_toStartOf="@+id/txvUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/txvUsuario"
         android:background="@drawable/shape_edittext"
         android:padding="8dp"/>
 
     <TextView
-        android:id="@+id/txvLoginPassword"
+        android:id="@+id/txvContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@string/txv_login_password"
+        android:text="@string/txv_contrasena"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
-        app:layout_constraintStart_toStartOf="@+id/edtLoginUsuario"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginUsuario" />
+        app:layout_constraintStart_toStartOf="@+id/edtUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/edtUsuario" />
 
     <EditText
-        android:id="@+id/edtLoginPassword"
+        android:id="@+id/edtContrasena"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintStart_toStartOf="@+id/txvLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/txvLoginPassword"
+        app:layout_constraintStart_toStartOf="@+id/txvContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/txvContrasena"
         android:background="@drawable/shape_edittext"
         android:padding="8dp"/>
 
     <CheckBox
-        android:id="@+id/chbxLoginRememberUser"
+        android:id="@+id/chbxRecordarUsuario"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:buttonTint="@android:color/background_light"
-        android:text="@string/chbx_login_remember_user"
+        android:text="@string/chbx_recordar_usuario"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/white"
-        app:layout_constraintStart_toStartOf="@+id/edtLoginPassword"
-        app:layout_constraintTop_toBottomOf="@+id/edtLoginPassword" />
+        app:layout_constraintStart_toStartOf="@+id/edtContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/edtContrasena" />
 
     <TextView
-        android:id="@+id/txvLoginRegister"
+        android:id="@+id/txvRegistrar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:text="@string/txv_login_register"
+        android:text="@string/txv_registrar"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/chbxLoginRememberUser"
-        app:layout_constraintStart_toEndOf="@+id/chbxLoginRememberUser" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/chbxRecordarUsuario"
+        app:layout_constraintStart_toEndOf="@+id/chbxRecordarUsuario" />
 
     <TextView
-        android:id="@+id/txvLoginForgetPassword"
+        android:id="@+id/txvOlvidoContrasena"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="6dp"
         android:layout_marginTop="8dp"
-        android:text="@string/txv_login_forget_password"
+        android:text="@string/txv_olvido_contrasena"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         android:textColor="@android:color/background_light"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@+id/chbxLoginRememberUser"
-        app:layout_constraintTop_toBottomOf="@+id/chbxLoginRememberUser" />
+        app:layout_constraintStart_toStartOf="@+id/chbxRecordarUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/chbxRecordarUsuario" />
 
     <Button
-        android:id="@+id/btnLoginAccess"
+        android:id="@+id/btnAcceder"
         style="@style/Widget.Button.Transparent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -111,30 +111,30 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
         android:background="@color/colorPrimaryDark"
-        android:text="@string/btn_login_access"
+        android:text="@string/btn_acceder"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvLoginForgetPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/txvOlvidoContrasena" />
 
     <Button
-        android:id="@+id/btnLoginGoogle"
+        android:id="@+id/btnGoogle"
         style="@style/Widget.Button.Transparent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:text="@string/btn_login_google"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-        app:layout_constraintBottom_toTopOf="@+id/btnLoginFacebook"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="@color/colorGoogle"
         android:drawableStart="@drawable/ic_google"
-        android:background="@color/colorGoogle"/>
+        android:text="@string/btn_google"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBottom_toTopOf="@+id/btnFacebook"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnLoginFacebook"
+        android:id="@+id/btnFacebook"
         style="@style/Widget.Button.Transparent"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
         android:layout_marginStart="8dp"
         android:background="@color/colorFacebook"
         android:drawableStart="@drawable/ic_facebook"
-        android:text="@string/btn_login_facebook"
+        android:text="@string/btn_facebook"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

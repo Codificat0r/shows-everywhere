@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Showseverywhere</string>
+    <string name="txv_titulo">Shows Everywhere - Login</string>
+    <string name="txv_usuario">User or e-mail</string>
+    <string name="txv_contrasena">Password</string>
+    <string name="chbx_recordar_usuario">Remember user</string>
+    <string name="txv_registrar"><u>Register</u></string>
+    <string name="txv_olvido_contrasena"><u>Forgot my password</u></string>
+    <string name="btn_acceder">Login</string>
+    <string name="btn_google">Google</string>
+    <string name="btn_facebook">Login with facebook</string>
+</resources>

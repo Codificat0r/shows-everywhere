@@ -1,7 +1,9 @@
-package com.example.showseverywhere;
+package com.example.showseverywhere.ui.login;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.showseverywhere.R;
 
 public class LoginActivity extends AppCompatActivity {
 
