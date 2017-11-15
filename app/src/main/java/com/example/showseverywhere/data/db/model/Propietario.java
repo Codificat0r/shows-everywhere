@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
  * Clase que dará soporte a un propietario de la base de datos
  */
 
-public class Propietario {
+public class Propietario implements Usuario{
     private int id;
     private String nombre;
     private String apellido;
@@ -17,11 +17,11 @@ public class Propietario {
     private Image foto_fondo;
     private String correo_electronico;
     private Image foto;
-    private String provincia;
+    private Provincia provincia;
 
     //CONSTRUCTOR
 
-    public Propietario(int id, String nombre, String apellido, @Nullable String descripcion, String telefono, String password, @Nullable Image foto_fondo, String correo_electronico, @Nullable Image foto, String provincia) {
+    public Propietario(int id, String nombre, String apellido, @Nullable String descripcion, String telefono, String password, @Nullable Image foto_fondo, String correo_electronico, @Nullable Image foto, Provincia provincia) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -108,11 +108,11 @@ public class Propietario {
         this.foto = foto;
     }
 
-    public String getProvincia() {
+    public Provincia getProvincia() {
         return provincia;
     }
 
-    public void setProvincia(String provincia) {
+    public void setProvincia(Provincia provincia) {
         this.provincia = provincia;
     }
 }

@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
  * Clase que dará soporte a un artista de la base de datos.
  */
 
-public class Artista {
+public class Artista implements Usuario{
     private int id;
     private String nombre;
     private String apellido;
@@ -16,7 +16,7 @@ public class Artista {
     private String telefono;
     private String descripcion;
     private double puntuacion;
-    private String provincia;
+    private Provincia provincia;
     private Image foto_fondo;
     private String organizacion;
     private String password;
@@ -27,7 +27,7 @@ public class Artista {
 
     //CONSTRUCTOR
 
-    public Artista(int id, String nombre, String apellido, String habilidades, String nombre_artistico, String telefono, @Nullable String descripcion, double puntuacion, String provincia, @Nullable Image foto_fondo, @Nullable String organizacion, String password, String tipo, @Nullable Image foto, int edad, String correo_electronico) {
+    public Artista(int id, String nombre, String apellido, String habilidades, @Nullable String nombre_artistico, String telefono, @Nullable String descripcion, double puntuacion, Provincia provincia, @Nullable Image foto_fondo, @Nullable String organizacion, String password, String tipo, @Nullable Image foto, int edad, String correo_electronico) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -112,11 +112,11 @@ public class Artista {
         this.puntuacion = puntuacion;
     }
 
-    public String getProvincia() {
+    public Provincia getProvincia() {
         return provincia;
     }
 
-    public void setProvincia(String provincia) {
+    public void setProvincia(Provincia provincia) {
         this.provincia = provincia;
     }
 
