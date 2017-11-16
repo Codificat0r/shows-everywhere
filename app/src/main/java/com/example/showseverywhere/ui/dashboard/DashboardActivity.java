@@ -9,6 +9,7 @@ import android.widget.ImageView;
 
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
+import com.example.showseverywhere.ui.destacados.DestacadosActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -71,7 +72,8 @@ public class DashboardActivity extends AppCompatActivity {
                     startActivity(i);
                     break;
                 case R.drawable.ic_toprated:
-
+                    i = new Intent(DashboardActivity.this, DestacadosActivity.class);
+                    startActivity(i);
                     break;
                 case R.drawable.ic_closeevents:
 

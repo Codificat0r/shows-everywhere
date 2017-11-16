@@ -12,19 +12,20 @@ import android.widget.TextView;
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.data.db.model.Artista;
 import com.example.showseverywhere.data.db.repository.ArtistaRepository;
-import com.example.showseverywhere.ui.utils.comparers.ArtistaNombreComparerAscendente;
+import com.example.showseverywhere.ui.utils.comparers.ArtistaPuntuacionComparerDescendente;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 /**
  * Created by carlos on 16/11/2017.
  */
 
-public class ArtistaAdapter extends ArrayAdapter<Artista>{
+public class ArtistasDestacadosAdapter extends ArrayAdapter<Artista>{
 
-    public ArtistaAdapter(@NonNull Context context) {
-        super(context, R.layout.item_artista, ArtistaRepository.getInstance().getArtistas());
-        //Ordenamos por calificacion
-        sort(new ArtistaNombreComparerAscendente());
+
+    public ArtistasDestacadosAdapter(@NonNull Context context) {
+        super(context, R.layout.item_artista_destacado, ArtistaRepository.getInstance().getArtistas());
+        //Ordenamos por puntuación de manera descendente.
+        sort(new ArtistaPuntuacionComparerDescendente());
     }
 
     @NonNull
@@ -32,23 +33,23 @@ public class ArtistaAdapter extends ArrayAdapter<Artista>{
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         MaterialLetterIcon icon;
         TextView txvNombreApellido;
-        TextView txvTipoArtista;
+        TextView txvPuntuacion;
         LayoutInflater inflater;
 
         View view = convertView;
 
         if (convertView == null) {
             inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            view = inflater.inflate(R.layout.item_artista, null);
+            view = inflater.inflate(R.layout.item_artista_destacado, null);
         }
 
         icon = (MaterialLetterIcon) view.findViewById(R.id.icon);
         txvNombreApellido = (TextView) view.findViewById(R.id.txvNombreApellido);
-        txvTipoArtista = (TextView) view.findViewById(R.id.txvTipoArtista);
+        txvPuntuacion = (TextView) view.findViewById(R.id.txvPuntuacion);
 
         icon.setLetter(getItem(position).getNombre().substring(0,1));
         txvNombreApellido.setText(getItem(position).getNombre() + " " + getItem(position).getApellido());
-        txvTipoArtista.setText(getItem(position).getTipo());
+        txvPuntuacion.setText(Double.toString(getItem(position).getPuntuacion()));
 
         return view;
     }

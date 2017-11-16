@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ui.dashboard.DashboardActivity" />
-        <activity android:name=".ui.busqueda.BusquedaActivity"></activity>
+        <activity android:name=".ui.busqueda.BusquedaActivity" />
+        <activity android:name=".ui.destacados.DestacadosActivity"></activity>
     </application>
 
 </manifest>
