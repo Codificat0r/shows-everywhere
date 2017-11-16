@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.showseverywhere.ui.busqueda.BusquedaActivity">
+    tools:context="com.example.showseverywhere.ui.destacados.DestacadosActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -14,11 +14,12 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:titleTextColor="@android:color/white" />
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="5dp"
+        app:titleTextColor="@android:color/white"/>
 
     <ListView
-        android:id="@+id/lstvBusqueda"
+        android:id="@+id/lstvDestacados"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 </LinearLayout>

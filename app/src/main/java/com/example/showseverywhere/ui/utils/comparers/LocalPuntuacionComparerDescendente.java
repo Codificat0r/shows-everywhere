@@ -1,6 +1,6 @@
 package com.example.showseverywhere.ui.utils.comparers;
 
-import com.example.showseverywhere.data.db.model.Artista;
+import com.example.showseverywhere.data.db.model.Local;
 
 import java.util.Comparator;
 
@@ -8,9 +8,9 @@ import java.util.Comparator;
  * Created by carlos on 16/11/2017.
  */
 
-public class ArtistaCalificacionComparerDescendente implements Comparator<Artista> {
+public class LocalPuntuacionComparerDescendente implements Comparator<Local>{
     @Override
-    public int compare(Artista o1, Artista o2) {
+    public int compare(Local o1, Local o2) {
         if (o1.getPuntuacion() > o2.getPuntuacion())
             return -1;
         if (o1.getPuntuacion() < o2.getPuntuacion())

@@ -25,13 +25,13 @@ public class BusquedaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_busqueda);
 
         artistas = new ArtistaAdapter(this);
-        //locales = new LocalAdapter(this);
-        //propietarios = new PropietarioAdapter(this);
+        locales = new LocalAdapter(this);
+        propietarios = new PropietarioAdapter(this);
 
         lstvBusqueda = (ListView) findViewById(R.id.lstvBusqueda);
         lstvBusqueda.setAdapter(artistas);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("Artistas");
+        toolbar.setTitle("Búsqueda de artistas");
         setSupportActionBar(toolbar);
     }
 }

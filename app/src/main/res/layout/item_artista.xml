@@ -12,6 +12,7 @@
         android:layout_height="@dimen/material_icon_height"
         android:layout_marginStart="@dimen/material_left_margin"
         android:layout_marginTop="@dimen/material_top_margin"
+        android:layout_marginBottom="@dimen/material_bottom_margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
