@@ -3,4 +3,10 @@
     <dimen name="shape_edittext_border_width">2dp</dimen>
     <dimen name="imgDashboardHeight">0dp</dimen>
     <dimen name="imgDashboardWidth">0dp</dimen>
+    <dimen name="material_icon_height">48dp</dimen>
+    <dimen name="material_icon_width">48dp</dimen>
+    <dimen name="material_top_margin">16dp</dimen>
+    <dimen name="material_left_margin">8dp</dimen>
+    <dimen name="material_primary_text_size">16sp</dimen>
+    <dimen name="material_secondary_text_size">14sp</dimen>
 </resources>

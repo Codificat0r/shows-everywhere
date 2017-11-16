@@ -18,7 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.dashboard.DashboardActivity"></activity>
+        <activity android:name=".ui.dashboard.DashboardActivity" />
+        <activity android:name=".ui.busqueda.BusquedaActivity"></activity>
     </application>
 
 </manifest>

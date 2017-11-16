@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.showseverywhere.R;
+import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -19,7 +20,7 @@ public class DashboardActivity extends AppCompatActivity {
         setContentView(R.layout.activity_dashboard);
 
         grdDashboard = (GridLayout) findViewById(R.id.grdDashboardRoot);
-        int[] imagenes = {R.drawable.ic_profile, R.drawable.ic_favourite, R.drawable.ic_friends, R.drawable.ic_search};;
+        int[] imagenes = {R.drawable.ic_profile, R.drawable.ic_favourite, R.drawable.ic_friends, R.drawable.ic_search, R.drawable.ic_toprated, R.drawable.ic_closeevents};;
         llenarGrid(imagenes);
     }
 
@@ -66,6 +67,13 @@ public class DashboardActivity extends AppCompatActivity {
 
                     break;
                 case R.drawable.ic_search:
+                    i = new Intent(DashboardActivity.this, BusquedaActivity.class);
+                    startActivity(i);
+                    break;
+                case R.drawable.ic_toprated:
+
+                    break;
+                case R.drawable.ic_closeevents:
 
                     break;
             }
