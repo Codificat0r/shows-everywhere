@@ -47,11 +47,7 @@ public class LocalesDestacadosAdapter extends ArrayAdapter<Local> {
 
         icon.setLetter(getItem(position).getNombre().substring(0,1));
         txvNombreLocal.setText(getItem(position).getNombre());
-<<<<<<< HEAD
         txvPuntuacion.setText("Puntuación: " + Double.toString(getItem(position).getPuntuacion()));
-=======
-        txvPuntuacion.setText(Double.toString(getItem(position).getPuntuacion()));
->>>>>>> 450261cb36b168ec85cbe58a36c786b3498fb8d0
 
         return view;
     }
