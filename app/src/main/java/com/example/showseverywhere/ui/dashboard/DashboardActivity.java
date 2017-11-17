@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
 import com.example.showseverywhere.ui.destacados.DestacadosActivity;
+import com.example.showseverywhere.ui.proximas.ActuacionesProximasActivity;
 
 public class DashboardActivity extends AppCompatActivity {
 
@@ -76,7 +77,8 @@ public class DashboardActivity extends AppCompatActivity {
                     startActivity(i);
                     break;
                 case R.drawable.ic_closeevents:
-
+                    i = new Intent(DashboardActivity.this, ActuacionesProximasActivity.class);
+                    startActivity(i);
                     break;
             }
         }

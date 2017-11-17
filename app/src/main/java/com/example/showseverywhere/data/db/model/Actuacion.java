@@ -26,6 +26,7 @@ public class Actuacion implements Comparable<Actuacion>{
         this.fecha = fecha;
         this.artista = artista;
         this.descripcion = descripcion;
+        this.grupo_artistico = null;
         this.hora_desde = hora_desde;
         this.hora_hasta = hora_hasta;
         this.local = local;
@@ -35,6 +36,7 @@ public class Actuacion implements Comparable<Actuacion>{
         this.fecha = fecha;
         this.grupo_artistico = grupo_artistico;
         this.descripcion = descripcion;
+        this.artista = null;
         this.hora_desde = hora_desde;
         this.hora_hasta = hora_hasta;
         this.local = local;
@@ -100,6 +102,6 @@ public class Actuacion implements Comparable<Actuacion>{
 
     @Override
     public int compareTo(@NonNull Actuacion o) {
-        return getFecha().compareTo(o.getFecha()) * -1;
+        return getFecha().compareTo(o.getFecha());
     }
 }

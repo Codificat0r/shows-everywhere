@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.example.showseverywhere.ui.actuacion.ActuacionActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <TextView
+        android:id="@+id/txvFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_fecha"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvFechaInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvFecha"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFecha" />
+
+    <TextView
+        android:id="@+id/txvArtistaGrupo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_artista_grupo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txvHoraFin"
+        app:layout_constraintTop_toBottomOf="@+id/txvHoraFin" />
+
+    <TextView
+        android:id="@+id/txvArtistaGrupoInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvArtistaGrupo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txvHoraFinInfo" />
+
+    <TextView
+        android:id="@+id/txvLocal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_local"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txvArtistaGrupo"
+        app:layout_constraintTop_toBottomOf="@+id/txvArtistaGrupo" />
+
+    <TextView
+        android:id="@+id/txvLocalInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvLocal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txvArtistaGrupoInfo" />
+
+    <TextView
+        android:id="@+id/txvDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_descripcion"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txvLocal"
+        app:layout_constraintTop_toBottomOf="@+id/txvLocal" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/edtDescripcionInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="none|textMultiLine"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/txvDescripcion"
+            app:layout_constraintTop_toBottomOf="@+id/txvDescripcion" />
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/txvHoraComienzo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_hora_comienzo"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txvFecha"
+        app:layout_constraintTop_toBottomOf="@+id/txvFecha" />
+
+    <TextView
+        android:id="@+id/txvHoraComienzoInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvHoraComienzo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txvFechaInfo" />
+
+    <TextView
+        android:id="@+id/txvHoraFin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/txv_hora_fin"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/txvHoraComienzo"
+        app:layout_constraintTop_toBottomOf="@+id/txvHoraComienzo" />
+
+    <TextView
+        android:id="@+id/txvHoraFinInfo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txvHoraFin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txvHoraComienzoInfo" />
+
+</android.support.constraint.ConstraintLayout>

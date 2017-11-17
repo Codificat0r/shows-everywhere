@@ -10,4 +10,13 @@
     <string name="btn_acceder">Login</string>
     <string name="btn_google">Google</string>
     <string name="btn_facebook">Login with facebook</string>
+    <string name="btn_asistir">Will assist</string>
+    <string name="btn_no_asistir">Wont assist</string>
+    <string name="btn_detalles">Details</string>
+    <string name="txv_fecha">Date</string>
+    <string name="txv_artista_grupo">Artist/group</string>
+    <string name="txv_local">Local</string>
+    <string name="txv_descripcion">Description</string>
+    <string name="txv_hora_comienzo">Starting hour</string>
+    <string name="txv_hora_fin">Finishing hour</string>
 </resources>
