@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.Artista;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de artistas
@@ -38,6 +39,7 @@ public class ArtistaRepository {
     }
 
     public ArrayList<Artista> getArtistas() {
+        Collections.sort(artistas);
         return artistas;
     }
 }

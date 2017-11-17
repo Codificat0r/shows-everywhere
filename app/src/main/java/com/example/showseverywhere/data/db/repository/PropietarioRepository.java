@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.Propietario;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de propietarios
@@ -38,6 +39,7 @@ public class PropietarioRepository {
     }
 
     public ArrayList<Propietario> getPropietarios() {
+        Collections.sort(propietarios);
         return propietarios;
     }
 }

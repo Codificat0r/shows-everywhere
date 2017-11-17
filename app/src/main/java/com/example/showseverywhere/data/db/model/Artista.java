@@ -1,13 +1,14 @@
 package com.example.showseverywhere.data.db.model;
 
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Clase que dará soporte a un artista de la base de datos.
  */
 
-public class Artista implements Usuario{
+public class Artista implements Usuario, Comparable<Artista>{
     private int id;
     private String nombre;
     private String apellido;
@@ -174,5 +175,10 @@ public class Artista implements Usuario{
 
     public void setCorreo_electronico(String correo_electronico) {
         this.correo_electronico = correo_electronico;
+    }
+
+    @Override
+    public int compareTo(@NonNull Artista o) {
+        return getNombre().compareTo(o.getNombre());
     }
 }

@@ -1,13 +1,14 @@
 package com.example.showseverywhere.data.db.model;
 
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Clase que dará soporte a un grupo artístico de la base de datos
  */
 
-public class GrupoArtistico {
+public class GrupoArtistico implements Comparable<GrupoArtistico>{
     private int id;
     private Image foto;
     private Image foto_fondo;
@@ -64,5 +65,10 @@ public class GrupoArtistico {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    @Override
+    public int compareTo(@NonNull GrupoArtistico o) {
+        return getNombre().compareTo(o.getNombre());
     }
 }

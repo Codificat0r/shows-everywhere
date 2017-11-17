@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.Actuacion;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Date;
 
 /**
@@ -39,6 +40,7 @@ public class ActuacionRepository {
     }
 
     public ArrayList<Actuacion> getActuaciones() {
+        Collections.sort(actuaciones);
         return actuaciones;
     }
 }

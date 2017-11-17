@@ -1,13 +1,14 @@
 package com.example.showseverywhere.data.db.model;
 
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Clase que dará soporte a una provincia de la base de datos
  */
 
-public class Local {
+public class Local implements Comparable<Local>{
     private String nombre;
     private Image foto_fondo;
     private Provincia provincia;
@@ -134,5 +135,10 @@ public class Local {
 
     public void setCorreo_electronico(String correo_electronico) {
         this.correo_electronico = correo_electronico;
+    }
+
+    @Override
+    public int compareTo(@NonNull Local o) {
+        return getNombre().compareTo(o.getNombre());
     }
 }

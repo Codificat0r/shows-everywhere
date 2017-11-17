@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ui.dashboard.DashboardActivity" />
         <activity android:name=".ui.busqueda.BusquedaActivity" />
-        <activity android:name=".ui.destacados.DestacadosActivity"></activity>
+        <activity android:name=".ui.destacados.DestacadosActivity" />
+        <activity android:name=".ui.proximas.ActuacionesProximasActivity"></activity>
     </application>
 
 </manifest>

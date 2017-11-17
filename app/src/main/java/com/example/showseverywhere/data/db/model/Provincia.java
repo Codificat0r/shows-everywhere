@@ -1,10 +1,12 @@
 package com.example.showseverywhere.data.db.model;
 
+import android.support.annotation.NonNull;
+
 /**
  * Clase que dará soporte a una provincia de la base de datos
  */
 
-public class Provincia {
+public class Provincia implements Comparable<Provincia>{
     private int id_provincia;
     private String provincia;
 
@@ -31,5 +33,10 @@ public class Provincia {
 
     public void setProvincia(String provincia) {
         this.provincia = provincia;
+    }
+
+    @Override
+    public int compareTo(@NonNull Provincia o) {
+        return provincia.compareTo(o.provincia);
     }
 }

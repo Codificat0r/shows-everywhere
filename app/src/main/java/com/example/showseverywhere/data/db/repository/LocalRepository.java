@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.Local;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de locales
@@ -38,6 +39,7 @@ public class LocalRepository {
     }
 
     public ArrayList<Local> getLocales() {
+        Collections.sort(locales);
         return locales;
     }
 }

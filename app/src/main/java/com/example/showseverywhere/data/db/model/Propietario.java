@@ -1,13 +1,14 @@
 package com.example.showseverywhere.data.db.model;
 
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Clase que dará soporte a un propietario de la base de datos
  */
 
-public class Propietario implements Usuario{
+public class Propietario implements Usuario, Comparable<Propietario>{
     private int id;
     private String nombre;
     private String apellido;
@@ -114,5 +115,10 @@ public class Propietario implements Usuario{
 
     public void setProvincia(Provincia provincia) {
         this.provincia = provincia;
+    }
+
+    @Override
+    public int compareTo(@NonNull Propietario o) {
+        return getNombre().compareTo(o.getNombre());
     }
 }

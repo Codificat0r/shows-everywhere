@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.UsuarioEstandar;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de usuarios estandar
@@ -38,6 +39,7 @@ public class UsuarioEstandarRepository {
     }
 
     public ArrayList<UsuarioEstandar> getUsuariosEstandar() {
+        Collections.sort(usuariosEstandar);
         return usuariosEstandar;
     }
 }

@@ -1,13 +1,14 @@
 package com.example.showseverywhere.data.db.model;
 
 import android.media.Image;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 /**
  * Clase que dara soporte a un usuario estándar de la base de datos
  */
 
-public class UsuarioEstandar implements Usuario{
+public class UsuarioEstandar implements Usuario, Comparable<UsuarioEstandar>{
     private String nick;
     private Image foto;
     private Image foto_fondo;
@@ -74,5 +75,10 @@ public class UsuarioEstandar implements Usuario{
 
     public void setCorreo_electronico(String correo_electronico) {
         this.correo_electronico = correo_electronico;
+    }
+
+    @Override
+    public int compareTo(@NonNull UsuarioEstandar o) {
+        return getNick().compareTo(o.getNick());
     }
 }

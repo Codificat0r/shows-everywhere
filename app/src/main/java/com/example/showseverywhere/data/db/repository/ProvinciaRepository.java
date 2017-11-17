@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.Provincia;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de provincias
@@ -38,6 +39,7 @@ public class ProvinciaRepository {
     }
 
     public ArrayList<Provincia> getProvincias() {
+        Collections.sort(provincias);
         return provincias;
     }
 }

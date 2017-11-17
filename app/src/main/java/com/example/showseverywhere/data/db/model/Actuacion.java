@@ -1,5 +1,6 @@
 package com.example.showseverywhere.data.db.model;
 
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import java.sql.Time;
@@ -9,7 +10,7 @@ import java.util.Date;
  * Clase que dará soporte a una actuación de la base de datos.
  */
 
-public class Actuacion {
+public class Actuacion implements Comparable<Actuacion>{
     private Date fecha;
     //Se debe comprobar que sea un artista
     private Artista artista;
@@ -95,5 +96,10 @@ public class Actuacion {
 
     public void setLocal(Local local) {
         this.local = local;
+    }
+
+    @Override
+    public int compareTo(@NonNull Actuacion o) {
+        return getFecha().compareTo(o.getFecha()) * -1;
     }
 }

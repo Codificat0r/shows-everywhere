@@ -3,6 +3,7 @@ package com.example.showseverywhere.data.db.repository;
 import com.example.showseverywhere.data.db.model.GrupoArtistico;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Repositorio de datos de grupos artisticos
@@ -38,6 +39,7 @@ public class GrupoArtisticoRepository {
     }
 
     public ArrayList<GrupoArtistico> getGruposArtisticos() {
+        Collections.sort(gruposArtisticos);
         return gruposArtisticos;
     }
 }
