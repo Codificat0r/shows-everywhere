@@ -18,4 +18,10 @@
     <string name="txv_descripcion">Descripcion</string>
     <string name="txv_hora_comienzo">Hora comienzo</string>
     <string name="txv_hora_fin">Hora fin</string>
+    <string name="favoritos">Favoritos</string>
+    <string name="actuaciones_proximas">Actuaciones próximas</string>
+    <string name="amigos">Amigos</string>
+    <string name="asistencias_amigos">Asistencias</string>
+    <string name="toolbar_amigos_title">Amigos</string>
+    <string name="toolbar_favoritos_title">Favoritos</string>
 </resources>

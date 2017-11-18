@@ -75,7 +75,7 @@ public class ActuacionesProximasAdapter extends RecyclerView.Adapter<Actuaciones
             txvDireccionLocal = (TextView) itemView.findViewById(R.id.txvDireccionLocal);
             txvFecha = (TextView) itemView.findViewById(R.id.txvFecha);
             txvArtista = (TextView) itemView.findViewById(R.id.txvArtista);
-            txvTipoArtista = (TextView) itemView.findViewById(R.id.txvTipoArtista);
+            txvTipoArtista = (TextView) itemView.findViewById(R.id.txvTipoArtistaProvincia);
             btnNoAsistir = (Button) itemView.findViewById(R.id.btnNoAsistir);
             btnAsistir = (Button) itemView.findViewById(R.id.btnAsistir);
             btnDetalles = (Button) itemView.findViewById(R.id.btnDetalles);

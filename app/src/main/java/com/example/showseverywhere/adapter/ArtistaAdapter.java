@@ -42,7 +42,7 @@ public class ArtistaAdapter extends ArrayAdapter<Artista>{
 
             artistaHolder.icon = (MaterialLetterIcon) view.findViewById(R.id.icon);
             artistaHolder.txvNombreApellido = (TextView) view.findViewById(R.id.txvNombreApellido);
-            artistaHolder.txvTipoArtista = (TextView) view.findViewById(R.id.txvTipoArtista);
+            artistaHolder.txvTipoArtista = (TextView) view.findViewById(R.id.txvTipoArtistaProvincia);
 
             view.setTag(artistaHolder);
         } else {

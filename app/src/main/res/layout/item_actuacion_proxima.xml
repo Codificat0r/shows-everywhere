@@ -48,7 +48,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txvTipoArtista"
+        android:id="@+id/txvTipoArtistaProvincia"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -91,5 +91,5 @@
         android:background="@color/colorPrimary"
         android:text="@string/btn_detalles"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvTipoArtista" />
+        app:layout_constraintTop_toBottomOf="@+id/txvTipoArtistaProvincia" />
 </android.support.constraint.ConstraintLayout>

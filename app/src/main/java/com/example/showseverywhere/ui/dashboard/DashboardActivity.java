@@ -8,8 +8,10 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.example.showseverywhere.R;
+import com.example.showseverywhere.ui.amigos.AmigosActivity;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
 import com.example.showseverywhere.ui.destacados.DestacadosActivity;
+import com.example.showseverywhere.ui.favoritos.FavoritosActivity;
 import com.example.showseverywhere.ui.proximas.ActuacionesProximasActivity;
 
 public class DashboardActivity extends AppCompatActivity {
@@ -63,10 +65,12 @@ public class DashboardActivity extends AppCompatActivity {
 
                     break;
                 case R.drawable.ic_friends:
-
+                    i = new Intent(DashboardActivity.this, AmigosActivity.class);
+                    startActivity(i);
                     break;
                 case R.drawable.ic_favourite:
-
+                    i = new Intent(DashboardActivity.this, FavoritosActivity.class);
+                    startActivity(i);
                     break;
                 case R.drawable.ic_search:
                     i = new Intent(DashboardActivity.this, BusquedaActivity.class);

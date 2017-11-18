@@ -22,7 +22,10 @@
         <activity android:name=".ui.busqueda.BusquedaActivity" />
         <activity android:name=".ui.destacados.DestacadosActivity" />
         <activity android:name=".ui.proximas.ActuacionesProximasActivity" />
-        <activity android:name=".ui.actuacion.ActuacionActivity"></activity>
+        <activity android:name=".ui.actuacion.ActuacionActivity" />
+        <activity android:name=".ui.favoritos.FavoritosActivity" />
+        <activity android:name=".ui.amigos.AmigosActivity" />
+        <activity android:name=".ui.perfil.PerfilActivity"></activity>
     </application>
 
 </manifest>
