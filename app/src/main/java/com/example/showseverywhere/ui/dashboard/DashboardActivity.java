@@ -4,25 +4,33 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayout;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.support.v7.widget.Toolbar;
 
 import com.example.showseverywhere.R;
+import com.example.showseverywhere.ui.about.AboutMeActivity;
 import com.example.showseverywhere.ui.amigos.AmigosActivity;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
 import com.example.showseverywhere.ui.destacados.DestacadosActivity;
 import com.example.showseverywhere.ui.favoritos.FavoritosActivity;
+import com.example.showseverywhere.ui.perfil.PerfilActivity;
 import com.example.showseverywhere.ui.proximas.ActuacionesProximasActivity;
 
 public class DashboardActivity extends AppCompatActivity {
-
     private GridLayout grdDashboard;
+    private Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
         grdDashboard = (GridLayout) findViewById(R.id.grdDashboardRoot);
         int[] imagenes = {R.drawable.ic_profile, R.drawable.ic_favourite, R.drawable.ic_friends, R.drawable.ic_search, R.drawable.ic_toprated, R.drawable.ic_closeevents};;
         llenarGrid(imagenes);
@@ -62,7 +70,8 @@ public class DashboardActivity extends AppCompatActivity {
             Intent i;
             switch (v.getId()) {
                 case R.drawable.ic_profile:
-
+                    i = new Intent(DashboardActivity.this, PerfilActivity.class);
+                    startActivity(i);
                     break;
                 case R.drawable.ic_friends:
                     i = new Intent(DashboardActivity.this, AmigosActivity.class);
@@ -86,5 +95,24 @@ public class DashboardActivity extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu_dashboard, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent i;
+        switch (item.getItemId()) {
+            case R.id.mnuiAboutMe:
+                i = new Intent(DashboardActivity.this, AboutMeActivity.class);
+                startActivity(i);
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

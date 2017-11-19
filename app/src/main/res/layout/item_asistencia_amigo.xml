@@ -8,8 +8,8 @@
 
     <com.github.ivbaranov.mli.MaterialLetterIcon
         android:id="@+id/icon"
-        android:layout_width="72dp"
-        android:layout_height="72dp"
+        android:layout_width="@dimen/materiallettericon_width_height_large"
+        android:layout_height="@dimen/materiallettericon_width_height_large"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"

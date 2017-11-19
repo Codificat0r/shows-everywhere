@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.showseverywhere.ui.registro.RegistroActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/txvSoyTipoUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txv_soy_tipo_usuario"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rGroup"
+        android:layout_width="173dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/txvSoyTipoUsuario"
+        app:layout_constraintTop_toBottomOf="@id/txvSoyTipoUsuario">
+
+        <RadioButton
+            android:id="@+id/rbtnUsuarioEstandar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:checked="true"
+            android:text="@string/rbtn_usuario_estandar"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbtnArtista"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbtn_artista"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white" />
+
+        <RadioButton
+            android:id="@+id/rbtnPropietario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbtn_propietario"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+            android:textColor="@android:color/white" />
+    </RadioGroup>
+
+    <ScrollView
+        android:id="@+id/scrlvUsuarioEstandar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rGroup"
+        app:layout_constraintVertical_bias="0.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_usuario_registro"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvContrasena"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_contrasena_registro"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvUsuario"
+                app:layout_constraintTop_toBottomOf="@+id/txvUsuario" />
+
+            <TextView
+                android:id="@+id/txvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_email"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvContrasena"
+                app:layout_constraintTop_toBottomOf="@+id/txvContrasena" />
+
+            <TextView
+                android:id="@+id/txvProvincia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_provincia"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvEmail"
+                app:layout_constraintTop_toBottomOf="@+id/txvEmail" />
+
+            <EditText
+                android:id="@+id/edtUsuario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="48dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvUsuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txvUsuario" />
+
+            <EditText
+                android:id="@+id/edtContrasena"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvContrasena"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuario"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuario" />
+
+            <EditText
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvEmail"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuario"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuario" />
+
+            <Spinner
+                android:id="@+id/spnrProvincia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+                app:layout_constraintStart_toStartOf="@+id/edtEmail"
+                app:layout_constraintTop_toTopOf="@+id/txvProvincia" />
+
+            <TextView
+                android:id="@+id/txvAviso1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_aviso_1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvProvincia"
+                app:layout_constraintTop_toBottomOf="@+id/txvProvincia" />
+
+            <Button
+                android:id="@+id/btnRegistrarme"
+                style="@style/Widget.Button.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/btn_registrarme"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvAviso1" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrlvArtista"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rGroup"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvUsuarioArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_usuario_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvApellidoArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_apellido_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvUsuarioArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvUsuarioArtista" />
+
+            <TextView
+                android:id="@+id/txvNombreArtisticoArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_nombre_artistico_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvApellidoArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvApellidoArtista" />
+
+            <TextView
+                android:id="@+id/txvContrasenaArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_contrasena_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvNombreArtisticoArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvNombreArtisticoArtista" />
+
+            <TextView
+                android:id="@+id/txvEmailArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_email_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvContrasenaArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvContrasenaArtista" />
+
+            <TextView
+                android:id="@+id/txvTelefonoArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_telefono_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvEmailArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvEmailArtista" />
+
+            <TextView
+                android:id="@+id/txvProvinciaArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_provincia_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvTelefonoArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvTelefonoArtista" />
+
+            <TextView
+                android:id="@+id/txvTipoArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_tipo_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvOrganizacionArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvOrganizacionArtista" />
+
+            <TextView
+                android:id="@+id/txvOrganizacionArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_organizacion_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvProvinciaArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvProvinciaArtista" />
+
+            <TextView
+                android:id="@+id/txvHabilidadesArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_habilidades_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvTipoArtista"
+                app:layout_constraintTop_toBottomOf="@+id/txvTipoArtista" />
+
+            <TextView
+                android:id="@+id/txvDescripcionArtista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_descripcion_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvHabilidadesArtista"
+                app:layout_constraintTop_toBottomOf="@+id/edtHabilidadesArtista" />
+
+            <EditText
+                android:id="@+id/edtUsuarioArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="70dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvUsuarioArtista"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txvUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtApellidoArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvApellidoArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtNombreArtisticoArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvNombreArtisticoArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtContrasenaArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvContrasenaArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtEmailArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvEmailArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtTelefonoArtista3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvTelefonoArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtTipoArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvOrganizacionArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtOrganizacionArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvTipoArtista"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioArtista" />
+
+            <EditText
+                android:id="@+id/edtHabilidadesArtista"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvHabilidadesArtista" />
+
+            <EditText
+                android:id="@+id/edtDescripcionArtista"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvDescripcionArtista" />
+
+            <Spinner
+                android:id="@+id/spnrProvinciaArtista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/edtEmailArtista"
+                app:layout_constraintStart_toStartOf="@+id/edtEmailArtista"
+                app:layout_constraintTop_toTopOf="@+id/txvProvinciaArtista" />
+
+            <TextView
+                android:id="@+id/txvAviso1Artista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_aviso1_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvDescripcionArtista"
+                app:layout_constraintTop_toBottomOf="@+id/edtDescripcionArtista" />
+
+            <TextView
+                android:id="@+id/txvAviso2Artista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/txv_aviso2_artista"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txvAviso1Artista"
+                app:layout_constraintTop_toBottomOf="@+id/txvAviso1Artista" />
+
+            <Button
+                android:id="@+id/btnRegistrarmeArtista"
+                style="@style/Widget.Button.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/btn_registrarme_artista"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvAviso2Artista" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrlvPropietario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rGroup"
+        app:layout_constraintVertical_bias="0.0"
+        android:visibility="gone">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txvUsuarioPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_nombre_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txvApellidoPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_apellido_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvUsuarioPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvUsuarioPropietario" />
+
+            <TextView
+                android:id="@+id/txvContrasenaPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_contrasena_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvApellidoPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvApellidoPropietario" />
+
+            <TextView
+                android:id="@+id/txvEmailPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_email_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvContrasenaPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvContrasenaPropietario" />
+
+            <TextView
+                android:id="@+id/txvTelefonoPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_telefono_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvEmailPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvEmailPropietario" />
+
+            <TextView
+                android:id="@+id/txvProvinciaPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_provincia_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvTelefonoPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvTelefonoPropietario" />
+
+            <TextView
+                android:id="@+id/txvDescripcionPropietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_descripcion_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
+                app:layout_constraintStart_toStartOf="@+id/txvProvinciaPropietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvProvinciaPropietario" />
+
+            <EditText
+                android:id="@+id/edtUsuarioPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="70dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvUsuarioPropietario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/txvUsuarioPropietario" />
+
+            <EditText
+                android:id="@+id/edtApellidoPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvApellidoPropietario"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioPropietario"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioPropietario" />
+
+            <EditText
+                android:id="@+id/edtContrasenaPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvContrasenaPropietario"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioPropietario"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioPropietario" />
+
+            <EditText
+                android:id="@+id/edtEmailPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvEmailPropietario"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioPropietario"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioPropietario" />
+
+            <EditText
+                android:id="@+id/edtTelefonoPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintBaseline_toBaselineOf="@+id/txvTelefonoPropietario"
+                app:layout_constraintEnd_toEndOf="@+id/edtUsuarioPropietario"
+                app:layout_constraintStart_toStartOf="@+id/edtUsuarioPropietario" />
+
+            <EditText
+                android:id="@+id/edtDescripcionPropietario"
+                android:layout_width="0dp"
+                android:layout_height="150dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/shape_edittext"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/padding_edittext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvDescripcionPropietario" />
+
+            <Spinner
+                android:id="@+id/spnrProvinciaPropietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/edtEmailPropietario"
+                app:layout_constraintStart_toStartOf="@+id/edtEmailPropietario"
+                app:layout_constraintTop_toTopOf="@+id/txvProvinciaPropietario" />
+
+            <TextView
+                android:id="@+id/txvAviso1Propietario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/txv_aviso1_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/edtDescripcionPropietario" />
+
+            <TextView
+                android:id="@+id/txvAviso2Propietario"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/txv_aviso2_propietario"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/txvAviso1Propietario"
+                app:layout_constraintTop_toBottomOf="@+id/txvAviso1Propietario" />
+
+            <Button
+                android:id="@+id/btnRegistrarmePropietario"
+                style="@style/Widget.Button.Transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:background="@color/colorPrimaryDark"
+                android:text="@string/btn_registrarme_propietario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txvAviso2Propietario" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

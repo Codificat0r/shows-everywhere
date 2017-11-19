@@ -15,4 +15,6 @@
     <dimen name="floatingActionButton_pressed_translation_z">12dp</dimen>
     <dimen name="floatingActionButton_elevation">6dp</dimen>
     <dimen name="margin_perfil_entre_elementos">5dp</dimen>
+    <dimen name="materiallettericon_width_height_large">72dp</dimen>
+    <dimen name="padding_edittext">8dp</dimen>
 </resources>

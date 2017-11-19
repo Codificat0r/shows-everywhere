@@ -1,5 +1,7 @@
 package com.example.showseverywhere.ui.amigos;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabItem;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import android.view.View;
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.adapter.AmigosAdapter;
 import com.example.showseverywhere.adapter.AmigosAsistenciasAdapter;
+import com.example.showseverywhere.ui.solicitudAmigo.SolicitudAmigoActivity;
 
 public class AmigosActivity extends AppCompatActivity{
     private RecyclerView rclrAmigos;
@@ -23,6 +26,7 @@ public class AmigosActivity extends AppCompatActivity{
     private AmigosAsistenciasAdapter amigosAsistenciasAdapter;
     private GridLayoutManager gridLayoutManager;
     private LinearLayoutManager linearLayoutManager;
+    private FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,7 @@ public class AmigosActivity extends AppCompatActivity{
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         tabs = (TabLayout) findViewById(R.id.tabs);
+        fab = (FloatingActionButton) findViewById(R.id.fab);
 
         rclrAmigos = (RecyclerView) findViewById(R.id.rclrAmigos);
         rclrAsistencias = (RecyclerView) findViewById(R.id.rclrAsistencias);
@@ -66,6 +71,14 @@ public class AmigosActivity extends AppCompatActivity{
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
                 return;
+            }
+        });
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AmigosActivity.this, SolicitudAmigoActivity.class);
+                startActivity(i);
             }
         });
     }
