@@ -33,7 +33,7 @@ public class AmigosActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_amigos);
 
-        gridLayoutManager = new GridLayoutManager(this, 2,1,false);
+        /*gridLayoutManager = new GridLayoutManager(this, 2,1,false);
         linearLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
 
         amigosAdapter = new AmigosAdapter();
@@ -80,6 +80,6 @@ public class AmigosActivity extends AppCompatActivity{
                 Intent i = new Intent(AmigosActivity.this, SolicitudAmigoActivity.class);
                 startActivity(i);
             }
-        });
+        });*/
     }
 }
