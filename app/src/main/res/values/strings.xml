@@ -20,8 +20,6 @@
     <string name="txv_hora_fin">Hora fin</string>
     <string name="favoritos">Favoritos</string>
     <string name="actuaciones_proximas">Actuaciones próximas</string>
-    <string name="amigos">Amigos</string>
-    <string name="asistencias_amigos">Asistencias</string>
     <string name="toolbar_amigos_title">Amigos</string>
     <string name="toolbar_favoritos_title">Favoritos</string>
     <string name="menu_item_sobre_mi">Sobre mi</string>
@@ -62,4 +60,9 @@
     <string name="txv_aviso1_propietario">* Campos obligatorios</string>
     <string name="txv_aviso2_propietario">Tu telefono solo será visible para artistas que quieran ponerse en contacto contigo</string>
     <string name="btn_registrarme_propietario">Registrarme</string>
+
+    <string-array name="amigos_tabs">
+        <item>Amigos</item>
+        <item>Asistencias</item>
+    </string-array>
 </resources>

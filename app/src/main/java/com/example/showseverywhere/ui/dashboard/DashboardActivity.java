@@ -13,7 +13,7 @@ import android.support.v7.widget.Toolbar;
 
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.ui.about.AboutMeActivity;
-import com.example.showseverywhere.ui.amigos.AmigosActivity;
+import com.example.showseverywhere.ui.amigos.vista.AmigosActivity;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
 import com.example.showseverywhere.ui.destacados.DestacadosActivity;
 import com.example.showseverywhere.ui.favoritos.FavoritosActivity;

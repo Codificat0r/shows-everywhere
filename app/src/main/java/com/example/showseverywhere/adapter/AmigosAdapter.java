@@ -15,6 +15,7 @@ import com.github.ivbaranov.mli.MaterialLetterIcon;
 import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by carlos on 17/11/2017.
@@ -24,7 +25,7 @@ public class AmigosAdapter extends RecyclerView.Adapter<AmigosAdapter.AmigosView
     private ArrayList<UsuarioEstandar> usuarios;
 
     public AmigosAdapter() {
-        usuarios = UsuarioEstandarRepository.getInstance().getUsuariosEstandar();
+        usuarios = new ArrayList<>();
     }
 
     @Override
@@ -55,6 +56,14 @@ public class AmigosAdapter extends RecyclerView.Adapter<AmigosAdapter.AmigosView
             icon = (MaterialLetterIcon) itemView.findViewById(R.id.icon);
             txvNick = (TextView) itemView.findViewById(R.id.txvNick);
         }
+    }
+
+    public void cargarDatos(List<UsuarioEstandar> amigos) {
+        usuarios.addAll(amigos);
+    }
+
+    public void limpiarLista() {
+        usuarios.clear();
     }
 
 }

@@ -18,30 +18,44 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.dashboard.DashboardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.busqueda.BusquedaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.destacados.DestacadosActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.proximas.ActuacionesProximasActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.actuacion.ActuacionActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.favoritos.FavoritosActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.amigos.AmigosActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.perfil.PerfilActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.about.AboutMeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.solicitudAmigo.SolicitudAmigoActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.registro.RegistroActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".ui.contrasenaolvidada.ContrasenaOlvidadaActivity"
-            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.busqueda.BusquedaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.destacados.DestacadosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.proximas.ActuacionesProximasActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.actuacion.ActuacionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.favoritos.FavoritosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.amigos.vista.AmigosActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.perfil.PerfilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.about.AboutMeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.amigos.vista.SolicitudAmigoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.registro.RegistroActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.contrasenaolvidada.ContrasenaOlvidadaActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.amigos.vista.AmigosLista" />
+        <activity android:name=".ui.amigos.vista.AmigosListaAsistencias"></activity>
     </application>
 
 </manifest>

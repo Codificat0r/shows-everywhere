@@ -21,8 +21,6 @@
     <string name="txv_hora_fin">Finishing hour</string>
     <string name="favoritos">Favorites</string>
     <string name="actuaciones_proximas">Close performances</string>
-    <string name="amigos">Friends</string>
-    <string name="asistencias_amigos">Assists</string>
     <string name="toolbar_amigos_title">Friends</string>
     <string name="toolbar_favoritos_title">Favourites</string>
     <string name="menu_item_sobre_mi">About me</string>
@@ -63,4 +61,9 @@
     <string name="txv_aviso1_propietario">* Obligatory fields</string>
     <string name="txv_aviso2_propietario">Your phone number will only be visible to artists who want to stablish contact with you</string>
     <string name="btn_registrarme_propietario">Register me</string>
+
+    <string-array name="amigos_tabs">
+        <item>Friends</item>
+        <item>Assists</item>
+    </string-array>
 </resources>

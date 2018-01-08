@@ -1,0 +1,20 @@
+package com.example.showseverywhere.ui.amigos.contrato;
+
+import com.example.showseverywhere.adapter.AmigosAdapter;
+import com.example.showseverywhere.data.db.model.UsuarioEstandar;
+
+import java.util.List;
+
+/**
+ * Created by carlos on 8/01/18.
+ */
+
+public interface AmigosListaContrato {
+    interface Vista {
+        void onExito(List<UsuarioEstandar> amigos);
+    }
+
+    interface Presenter {
+        void pedirListaAmigos();
+    }
+}
