@@ -13,6 +13,7 @@ import com.example.showseverywhere.data.db.repository.AsistenciaRepository;
 import com.github.ivbaranov.mli.MaterialLetterIcon;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by carlos on 17/11/2017.
@@ -22,7 +23,7 @@ public class AmigosAsistenciasAdapter extends RecyclerView.Adapter<AmigosAsisten
     private ArrayList<Asistencia> asistencias;
 
     public AmigosAsistenciasAdapter() {
-        this.asistencias = AsistenciaRepository.getInstance().getAsistencias();
+        this.asistencias = new ArrayList<>();
     }
 
     @Override
@@ -66,5 +67,13 @@ public class AmigosAsistenciasAdapter extends RecyclerView.Adapter<AmigosAsisten
             txvArtista = (TextView) itemView.findViewById(R.id.txvArtista);
             txvTipoArtista = (TextView) itemView.findViewById(R.id.txvTipoArtistaProvincia);
         }
+    }
+
+    public void cargarAsistencias(List<Asistencia> asistencias) {
+        this.asistencias.addAll(asistencias);
+    }
+
+    public void limpiarLista() {
+        asistencias.clear();
     }
 }

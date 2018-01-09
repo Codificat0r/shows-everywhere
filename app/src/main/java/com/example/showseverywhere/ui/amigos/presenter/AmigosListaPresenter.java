@@ -27,6 +27,26 @@ public class AmigosListaPresenter implements AmigosListaContrato.Presenter, Amig
     }
 
     @Override
+    public void pedirMarcarSeleccionado(int position) {
+        interactor.marcarSeleccionado(position);
+    }
+
+    @Override
+    public void pedirDesmarcarSeleccionado(int position) {
+        interactor.desmarcarSeleccionado(position);
+    }
+
+    @Override
+    public void pedirDesmarcarTodos() {
+        interactor.desmarcarTodos();
+    }
+
+    @Override
+    public void pedirBorrarAmigos() {
+        interactor.borrarAmigos();
+    }
+
+    @Override
     public void onExito(List<UsuarioEstandar> amigos) {
         vista.onExito(amigos);
     }

@@ -15,6 +15,7 @@ public class UsuarioEstandar implements Usuario, Comparable<UsuarioEstandar>{
     private String password;
     private Provincia provincia;
     private String correo_electronico;
+    private Boolean isSelected = false;
 
     //CONSTRUCTOR
 
@@ -80,5 +81,13 @@ public class UsuarioEstandar implements Usuario, Comparable<UsuarioEstandar>{
     @Override
     public int compareTo(@NonNull UsuarioEstandar o) {
         return getNick().compareTo(o.getNick());
+    }
+
+    public Boolean getSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(Boolean selected) {
+        isSelected = selected;
     }
 }

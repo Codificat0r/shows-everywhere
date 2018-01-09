@@ -16,6 +16,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.adapter.AmigosAdapter;
@@ -24,9 +25,11 @@ import com.example.showseverywhere.ui.amigos.contrato.AmigosListaContrato;
 import com.example.showseverywhere.ui.amigos.presenter.AmigosListaPresenter;
 
 import java.io.Serializable;
+import java.util.Dictionary;
+import java.util.HashMap;
 import java.util.List;
 
-public class AmigosLista extends Fragment implements AmigosListaContrato.Vista{
+public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, AmigosAdapter.OnItemClicked{
 
     private AmigosListaListener callback;
     private AmigosAdapter adapter;
@@ -34,8 +37,15 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista{
     private AmigosListaContrato.Presenter presenter;
     public static final String TAG = "AMIGOSLISTA";
     private FloatingActionButton fab;
+    //Contador para contar los marcados
+    private int contadorMarcados = 0;
+    //Flag para comprobar si está puesto el action mode:
+    private Boolean flagActionMode = false;
 
     public interface AmigosListaListener {
+        void comenzarSupportActionMode();
+        void finalizarSupportActionMode();
+        void modificarTextoActionMode(String texto);
 
     }
 
@@ -56,11 +66,10 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista{
 
         presenter = new AmigosListaPresenter(this);
 
-        adapter = new AmigosAdapter();
+        adapter = new AmigosAdapter(this);
 
         rclrAmigos = (RecyclerView) rootView.findViewById(R.id.rclrAmigos);
         rclrAmigos.setLayoutManager(new GridLayoutManager(getContext(), 2, LinearLayoutManager.VERTICAL, false));
-        rclrAmigos.setAdapter(adapter);
 
         fab = (FloatingActionButton) rootView.findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -91,6 +100,7 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista{
     public void onExito(List<UsuarioEstandar> amigos) {
         adapter.limpiarLista();
         adapter.cargarDatos(amigos);
+        rclrAmigos.setAdapter(adapter);
     }
 
     @Override
@@ -101,5 +111,49 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista{
                 presenter.pedirListaAmigos();
             }
         }
+    }
+
+    @Override
+    public void onItemClicked(int position) {
+        if (flagActionMode) {
+            presenter.pedirDesmarcarSeleccionado(position);
+            contadorMarcados--;
+            if (contadorMarcados == 0) {
+                flagActionMode = false;
+                callback.finalizarSupportActionMode();
+            }
+            callback.modificarTextoActionMode(contadorMarcados + " seleccionados");
+        }
+        //Zona para ver el perfil con un click si no está el action mode puesto:
+        if (!flagActionMode) {
+            //EN CONSTRUCCION
+        }
+    }
+
+    @Override
+    public void onItemLongClicked(int position) {
+        presenter.pedirMarcarSeleccionado(position);
+        contadorMarcados++;
+        if (contadorMarcados >= 1) {
+            if (!flagActionMode) {
+                callback.comenzarSupportActionMode();
+            }
+            flagActionMode = true;
+            callback.modificarTextoActionMode(contadorMarcados + " seleccionados");
+        }
+    }
+
+    public void desmarcarTodos() {
+        flagActionMode = false;
+        contadorMarcados = 0;
+        presenter.pedirDesmarcarTodos();
+    }
+
+    public void borrarPulsado() {
+        flagActionMode = false;
+        contadorMarcados = 0;
+        presenter.pedirBorrarAmigos();
+        callback.finalizarSupportActionMode();
+
     }
 }

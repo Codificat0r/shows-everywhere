@@ -60,6 +60,7 @@
     <string name="txv_aviso1_propietario">* Campos obligatorios</string>
     <string name="txv_aviso2_propietario">Tu telefono solo será visible para artistas que quieran ponerse en contacto contigo</string>
     <string name="btn_registrarme_propietario">Registrarme</string>
+    <string name="action_mode_amigos_borrar">Borrar</string>
 
     <string-array name="amigos_tabs">
         <item>Amigos</item>

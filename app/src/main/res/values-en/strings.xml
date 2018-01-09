@@ -61,6 +61,7 @@
     <string name="txv_aviso1_propietario">* Obligatory fields</string>
     <string name="txv_aviso2_propietario">Your phone number will only be visible to artists who want to stablish contact with you</string>
     <string name="btn_registrarme_propietario">Register me</string>
+    <string name="action_mode_amigos_borrar">Delete</string>
 
     <string-array name="amigos_tabs">
         <item>Friends</item>

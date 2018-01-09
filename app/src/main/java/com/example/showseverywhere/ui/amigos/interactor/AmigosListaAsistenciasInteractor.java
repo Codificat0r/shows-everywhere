@@ -5,4 +5,5 @@ package com.example.showseverywhere.ui.amigos.interactor;
  */
 
 public interface AmigosListaAsistenciasInteractor {
+    void obtenerListaAsistencias();
 }

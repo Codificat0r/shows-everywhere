@@ -3,6 +3,7 @@ package com.example.showseverywhere.ui.amigos.contrato;
 import com.example.showseverywhere.adapter.AmigosAdapter;
 import com.example.showseverywhere.data.db.model.UsuarioEstandar;
 
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -16,5 +17,9 @@ public interface AmigosListaContrato {
 
     interface Presenter {
         void pedirListaAmigos();
+        void pedirMarcarSeleccionado(int position);
+        void pedirDesmarcarSeleccionado(int position);
+        void pedirDesmarcarTodos();
+        void pedirBorrarAmigos();
     }
 }
