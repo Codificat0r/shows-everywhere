@@ -50,4 +50,14 @@ public class AmigosListaPresenter implements AmigosListaContrato.Presenter, Amig
     public void onExito(List<UsuarioEstandar> amigos) {
         vista.onExito(amigos);
     }
+
+    @Override
+    public void pedirVerificarMarcado(int position) {
+        interactor.verificarMarcado(position);
+    }
+
+    @Override
+    public void onNoMarcado(int position) {
+        vista.marcar(position);
+    }
 }

@@ -15,4 +15,5 @@ public interface AmigosListaInteractor {
     void desmarcarSeleccionado(int position);
     void desmarcarTodos();
     void borrarAmigos();
+    void verificarMarcado(int position);
 }

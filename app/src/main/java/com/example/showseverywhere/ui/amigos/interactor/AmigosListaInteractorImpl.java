@@ -17,6 +17,7 @@ public class AmigosListaInteractorImpl implements AmigosListaInteractor {
 
     public interface OnExitoOperacionRequeridaListener {
         void onExito(List<UsuarioEstandar> amigos);
+        void onNoMarcado(int position);
     }
 
     public AmigosListaInteractorImpl(OnExitoOperacionRequeridaListener listener) {
@@ -65,6 +66,12 @@ public class AmigosListaInteractorImpl implements AmigosListaInteractor {
         }
 
         listener.onExito(usuarios);
+    }
+
+    @Override
+    public void verificarMarcado(int position) {
+        if (!UsuarioEstandarRepository.getInstance().getUsuariosEstandar().get(position).getSelected())
+            listener.onNoMarcado(position);
     }
 
 }

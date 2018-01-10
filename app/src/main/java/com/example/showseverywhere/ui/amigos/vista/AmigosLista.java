@@ -132,6 +132,12 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, 
 
     @Override
     public void onItemLongClicked(int position) {
+        //Verificamos si esta marcado o no antes de continuar a marcarlo.
+        presenter.pedirVerificarMarcado(position);
+    }
+
+    @Override
+    public void marcar(int position) {
         presenter.pedirMarcarSeleccionado(position);
         contadorMarcados++;
         if (contadorMarcados >= 1) {
@@ -154,6 +160,5 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, 
         contadorMarcados = 0;
         presenter.pedirBorrarAmigos();
         callback.finalizarSupportActionMode();
-
     }
 }
