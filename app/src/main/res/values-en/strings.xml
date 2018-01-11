@@ -63,6 +63,22 @@
     <string name="btn_registrarme_propietario">Register me</string>
     <string name="action_mode_amigos_borrar">Delete</string>
 
+    <!--Errores-->
+
+    <string name="error_usuario_vacio">You must write a user</string>
+    <string name="error_contrasena_vacia">You must write a password</string>
+    <string name="error_credenciales_incorrectos">Incorrect username or password. Do not match with any registered user.</string>
+    <string name="error_campo_obligatorio_vacio">You must fill all obligatory fields (*)</string>
+    <string name="error_email_mal_formado">Incorrect email</string>
+    <string name="error_contrasena_mal_formada">The password must have: one number, one uppercase and one lowercase. Must
+    have minimum 6 characters and 50 characters maximum.</string>
+
+    <!-- Registro -->
+
+    <string name="exito_registro">You have registered successfully</string>
+
+    <!--Arrays-->
+
     <string-array name="amigos_tabs">
         <item>Friends</item>
         <item>Assists</item>

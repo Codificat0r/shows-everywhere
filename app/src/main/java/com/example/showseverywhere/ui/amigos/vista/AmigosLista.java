@@ -2,13 +2,9 @@ package com.example.showseverywhere.ui.amigos.vista;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.GradientDrawable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.ListFragment;
-import android.content.Context;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +12,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.adapter.AmigosAdapter;
@@ -24,9 +19,6 @@ import com.example.showseverywhere.data.db.model.UsuarioEstandar;
 import com.example.showseverywhere.ui.amigos.contrato.AmigosListaContrato;
 import com.example.showseverywhere.ui.amigos.presenter.AmigosListaPresenter;
 
-import java.io.Serializable;
-import java.util.Dictionary;
-import java.util.HashMap;
 import java.util.List;
 
 public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, AmigosAdapter.OnItemClicked{
@@ -116,13 +108,7 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, 
     @Override
     public void onItemClicked(int position) {
         if (flagActionMode) {
-            presenter.pedirDesmarcarSeleccionado(position);
-            contadorMarcados--;
-            if (contadorMarcados == 0) {
-                flagActionMode = false;
-                callback.finalizarSupportActionMode();
-            }
-            callback.modificarTextoActionMode(contadorMarcados + " seleccionados");
+            presenter.pedirVerificarMarcadoParaDesmarcar(position);
         }
         //Zona para ver el perfil con un click si no está el action mode puesto:
         if (!flagActionMode) {
@@ -133,7 +119,7 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, 
     @Override
     public void onItemLongClicked(int position) {
         //Verificamos si esta marcado o no antes de continuar a marcarlo.
-        presenter.pedirVerificarMarcado(position);
+        presenter.pedirVerificarNoMarcadoParaMarcar(position);
     }
 
     @Override
@@ -147,6 +133,17 @@ public class AmigosLista extends Fragment implements AmigosListaContrato.Vista, 
             flagActionMode = true;
             callback.modificarTextoActionMode(contadorMarcados + " seleccionados");
         }
+    }
+
+    @Override
+    public void desmarcar(int position) {
+        presenter.pedirDesmarcarSeleccionado(position);
+        contadorMarcados--;
+        if (contadorMarcados == 0) {
+            flagActionMode = false;
+            callback.finalizarSupportActionMode();
+        }
+        callback.modificarTextoActionMode(contadorMarcados + " seleccionados");
     }
 
     public void desmarcarTodos() {

@@ -62,6 +62,20 @@
     <string name="btn_registrarme_propietario">Registrarme</string>
     <string name="action_mode_amigos_borrar">Borrar</string>
 
+    <!--Errores login y registro-->
+    <string name="error_usuario_vacio">Debe introducir un usuario</string>
+    <string name="error_contrasena_vacia">Debe introducir una contraseña</string>
+    <string name="error_credenciales_incorrectos">Nombre de usuario o contraseña no coinciden con ningún usuario registrado</string>
+    <string name="error_campo_obligatorio_vacio">Debe rellenar todos los campos obligatorios (*)</string>
+    <string name="error_email_mal_formado">El email no es correcto</string>
+    <string name="error_contrasena_mal_formada">La contraseña debe tener al menos: un número, una mayúscula y una minúscula. Debe
+    estar entre los 6 y los 50 carácteres.</string>
+
+    <!--Registro-->
+
+    <string name="exito_registro">Se ha registrado con éxito</string>
+
+    <!--Arrays-->
     <string-array name="amigos_tabs">
         <item>Amigos</item>
         <item>Asistencias</item>

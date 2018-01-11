@@ -1,6 +1,5 @@
 package com.example.showseverywhere.ui.amigos.presenter;
 
-import com.example.showseverywhere.adapter.AmigosAdapter;
 import com.example.showseverywhere.data.db.model.UsuarioEstandar;
 import com.example.showseverywhere.ui.amigos.contrato.AmigosListaContrato;
 import com.example.showseverywhere.ui.amigos.interactor.AmigosListaInteractor;
@@ -52,12 +51,22 @@ public class AmigosListaPresenter implements AmigosListaContrato.Presenter, Amig
     }
 
     @Override
-    public void pedirVerificarMarcado(int position) {
-        interactor.verificarMarcado(position);
+    public void pedirVerificarNoMarcadoParaMarcar(int position) {
+        interactor.verificarNoMarcadoParaMarcar(position);
     }
 
     @Override
-    public void onNoMarcado(int position) {
+    public void pedirVerificarMarcadoParaDesmarcar(int position) {
+        interactor.verificarMarcadoParaDesmarcar(position);
+    }
+
+    @Override
+    public void onNoMarcadoParaMarcar(int position) {
         vista.marcar(position);
+    }
+
+    @Override
+    public void onMarcadoParaDesmarcar(int position) {
+        vista.desmarcar(position);
     }
 }

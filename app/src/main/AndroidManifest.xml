@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.login.LoginActivity"
+            android:name=".ui.login.vista.LoginActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -49,7 +49,7 @@
             android:name=".ui.amigos.vista.SolicitudAmigoActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.registro.RegistroActivity"
+            android:name=".ui.login.vista.RegistroActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.contrasenaolvidada.ContrasenaOlvidadaActivity"

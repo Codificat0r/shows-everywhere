@@ -1,6 +1,5 @@
 package com.example.showseverywhere.ui.amigos.interactor;
 
-import com.example.showseverywhere.adapter.AmigosAdapter;
 import com.example.showseverywhere.data.db.model.UsuarioEstandar;
 import com.example.showseverywhere.data.db.repository.UsuarioEstandarRepository;
 
@@ -17,7 +16,8 @@ public class AmigosListaInteractorImpl implements AmigosListaInteractor {
 
     public interface OnExitoOperacionRequeridaListener {
         void onExito(List<UsuarioEstandar> amigos);
-        void onNoMarcado(int position);
+        void onNoMarcadoParaMarcar(int position);
+        void onMarcadoParaDesmarcar(int position);
     }
 
     public AmigosListaInteractorImpl(OnExitoOperacionRequeridaListener listener) {
@@ -69,9 +69,15 @@ public class AmigosListaInteractorImpl implements AmigosListaInteractor {
     }
 
     @Override
-    public void verificarMarcado(int position) {
+    public void verificarNoMarcadoParaMarcar(int position) {
         if (!UsuarioEstandarRepository.getInstance().getUsuariosEstandar().get(position).getSelected())
-            listener.onNoMarcado(position);
+            listener.onNoMarcadoParaMarcar(position);
+    }
+
+    @Override
+    public void verificarMarcadoParaDesmarcar(int position) {
+        if (UsuarioEstandarRepository.getInstance().getUsuariosEstandar().get(position).getSelected())
+            listener.onMarcadoParaDesmarcar(position);
     }
 
 }

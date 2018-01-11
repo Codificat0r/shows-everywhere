@@ -14,6 +14,7 @@ public interface AmigosListaContrato {
     interface Vista {
         void onExito(List<UsuarioEstandar> amigos);
         void marcar(int position);
+        void desmarcar(int position);
     }
 
     interface Presenter {
@@ -22,6 +23,7 @@ public interface AmigosListaContrato {
         void pedirDesmarcarSeleccionado(int position);
         void pedirDesmarcarTodos();
         void pedirBorrarAmigos();
-        void pedirVerificarMarcado(int position);
+        void pedirVerificarNoMarcadoParaMarcar(int position);
+        void pedirVerificarMarcadoParaDesmarcar(int position);
     }
 }
