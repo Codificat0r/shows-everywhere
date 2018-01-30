@@ -42,4 +42,8 @@ public class LocalRepository {
         Collections.sort(locales);
         return locales;
     }
+
+    public void borrarLocal(Local local) {
+        locales.remove(local);
+    }
 }

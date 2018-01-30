@@ -23,7 +23,7 @@ import java.util.ArrayList;
 
 public class LocalesDestacadosAdapter extends ArrayAdapter<Local> {
     public LocalesDestacadosAdapter(@NonNull Context context) {
-        super(context, R.layout.item_local_destacado, new ArrayList<Local>(LocalRepository.getInstance().getLocales()));
+        super(context, R.layout.item_local_destacado, new ArrayList<Local>());
         //Ordenamos por puntuacion descendente
         sort(new LocalPuntuacionComparerDescendente());
     }

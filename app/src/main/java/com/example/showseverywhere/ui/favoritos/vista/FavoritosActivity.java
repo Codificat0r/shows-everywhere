@@ -1,4 +1,4 @@
-package com.example.showseverywhere.ui.favoritos;
+package com.example.showseverywhere.ui.favoritos.vista;
 
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +12,10 @@ import android.view.View;
 import com.example.showseverywhere.R;
 import com.example.showseverywhere.adapter.ArtistasFavoritosAdapter;
 import com.example.showseverywhere.adapter.ArtistasFavoritosProximasActuacionesAdapter;
+import com.example.showseverywhere.ui.favoritos.contrato.FavoritosContrato;
+import com.example.showseverywhere.ui.favoritos.presenter.FavoritosPresenter;
 
-public class FavoritosActivity extends AppCompatActivity {
+public class FavoritosActivity extends AppCompatActivity implements FavoritosContrato.Vista {
     private RecyclerView rclrFavoritos;
     private RecyclerView rclrActuacionesProximas;
     private Toolbar toolbar;
@@ -22,11 +24,14 @@ public class FavoritosActivity extends AppCompatActivity {
     private GridLayoutManager gridLayoutManager2;
     private ArtistasFavoritosAdapter artistasFavoritosAdapter;
     private ArtistasFavoritosProximasActuacionesAdapter artistasFavoritosProximasActuacionesAdapter;
+    private FavoritosContrato.Presenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_favoritos);
+
+        presenter = new FavoritosPresenter(this);
 
         gridLayoutManager = new GridLayoutManager(this, 2, 1, false);
         gridLayoutManager2 = new GridLayoutManager(this, 2, 1, false);

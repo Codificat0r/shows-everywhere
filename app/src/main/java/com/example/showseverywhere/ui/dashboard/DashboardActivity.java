@@ -15,8 +15,8 @@ import com.example.showseverywhere.R;
 import com.example.showseverywhere.ui.about.AboutMeActivity;
 import com.example.showseverywhere.ui.amigos.vista.AmigosActivity;
 import com.example.showseverywhere.ui.busqueda.BusquedaActivity;
-import com.example.showseverywhere.ui.destacados.DestacadosActivity;
-import com.example.showseverywhere.ui.favoritos.FavoritosActivity;
+import com.example.showseverywhere.ui.destacados.vista.DestacadosActivity;
+import com.example.showseverywhere.ui.favoritos.vista.FavoritosActivity;
 import com.example.showseverywhere.ui.perfil.PerfilActivity;
 import com.example.showseverywhere.ui.proximas.ActuacionesProximasActivity;
 

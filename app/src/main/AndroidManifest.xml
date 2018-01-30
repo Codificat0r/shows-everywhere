@@ -25,7 +25,7 @@
             android:name=".ui.busqueda.BusquedaActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.destacados.DestacadosActivity"
+            android:name=".ui.destacados.vista.DestacadosActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.proximas.ActuacionesProximasActivity"
@@ -34,7 +34,7 @@
             android:name=".ui.actuacion.ActuacionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.favoritos.FavoritosActivity"
+            android:name=".ui.favoritos.vista.FavoritosActivity"
             android:screenOrientation="portrait" />
         <activity
             android:name=".ui.amigos.vista.AmigosActivity"
@@ -55,7 +55,8 @@
             android:name=".ui.contrasenaolvidada.ContrasenaOlvidadaActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".ui.amigos.vista.AmigosLista" />
-        <activity android:name=".ui.amigos.vista.AmigosListaAsistencias"></activity>
+        <activity android:name=".ui.amigos.vista.AmigosListaAsistencias" />
+        <activity android:name=".ui.destacados.vista.AnadirDestacadoActivity"></activity>
     </application>
 
 </manifest>
